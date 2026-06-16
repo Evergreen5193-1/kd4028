@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Governors — KD 4028</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">KD 4028</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="governors.html" class="active">Governors</a></li>
+    <li><a href="kvk.html">KvK History</a></li>
+    <li><a href="org.html">Organization</a></li>
+    <li><a href="migration.html">Migration</a></li>
+  </ul>
+  <a href="https://discord.gg/Ym87J2mW3" target="_blank" class="nav-discord">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.102 18.078.114 18.1.131 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 13.99 13.99 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+    Join Discord ↗
+  </a>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Kingdom 4028</div>
+      <h1 class="hero-h1">Governor Stats</h1>
+      <p class="hero-sub">Top governors ranked by power. Data pulled from InfoCat.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <!-- summary -->
+      <div class="stat-grid reveal" style="grid-template-columns:repeat(3,1fr);margin-bottom:1.5rem">
+        <div class="stat-card">
+          <div class="stat-card-label">Governors Tracked</div>
+          <div class="stat-card-value" id="govTotal">—</div>
+          <div class="stat-card-sub">Top members by power</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Combined Power</div>
+          <div class="stat-card-value" id="govPower">—</div>
+          <div class="stat-card-sub">Total of tracked governors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">City Hall 25</div>
+          <div class="stat-card-value" id="govCh25">—</div>
+          <div class="stat-card-sub">Max city hall governors</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:1.25rem">
+        <input type="text" id="govSearch" placeholder="Search governor…" style="background:var(--surface);border:1px solid var(--border2);color:var(--text);padding:0.5rem 0.75rem;border-radius:var(--radius);font-size:0.8rem;min-width:200px;outline:none;font-family:var(--ff-ui)">
+        <span id="govCount" style="font-size:0.75rem;color:var(--text-dim);margin-left:auto"></span>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table id="govTable">
+          <thead>
+            <tr>
+              <th class="td-rank">#</th>
+              <th class="sortable" data-col="0">Governor <span class="sort-icon">↕</span></th>
+              <th class="sortable sorted" data-col="1">Power <span class="sort-icon">↓</span></th>
+              <th class="sortable" data-col="2">Kill Points <span class="sort-icon">↕</span></th>
+              <th class="sortable" data-col="3">T4 Kills <span class="sort-icon">↕</span></th>
+              <th class="sortable" data-col="4">T5 Kills <span class="sort-icon">↕</span></th>
+              <th class="sortable" data-col="5">Deaths <span class="sort-icon">↕</span></th>
+              <th class="sortable" data-col="6">CH <span class="sort-icon">↕</span></th>
+            </tr>
+          </thead>
+          <tbody id="govBody"></tbody>
+        </table>
+      </div>
+      <p style="font-size:0.72rem;color:var(--text-dim);margin-top:0.75rem">
+        Showing top governors by power. Data via InfoCat scanner. <a href="https://infocat-rok.com" target="_blank" style="color:var(--gold)">View full platform →</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">Kingdom 4028 · Sons of Attila</div>
+    <ul class="footer-links">
+      <li><a href="governors.html">Governors</a></li>
+      <li><a href="kvk.html">KvK</a></li>
+      <li><a href="org.html">Org</a></li>
+      <li><a href="migration.html">Migration</a></li>
+      <li><a href="https://discord.gg/Ym87J2mW3" target="_blank">Discord ↗</a></li>
+    </ul>
+    <div class="footer-note">Data updated regularly via InfoCat</div>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+<script src="govs_embed.js"></script>
+<script>
+function fmt(n){ const neg=n<0; n=Math.abs(n); let s=n>=1e9?(n/1e9).toFixed(2)+'B':n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(0)+'K':n.toLocaleString(); return (neg?'-':'')+s; }
+document.getElementById('govTotal').textContent = GOVS.count.toLocaleString();
+document.getElementById('govPower').textContent = fmt(GOVS.total_power);
+document.getElementById('govCh25').textContent  = GOVS.ch25.toLocaleString();
+
+let gSort=1, gDir=-1, gFilter='';
+function renderGov(){
+  let rows = GOVS.rows.map(r=>({name:r[0],power:r[1],kp:r[2],t4:r[3],t5:r[4],dead:r[5],ch:r[6]}));
+  if(gFilter) rows = rows.filter(r=>r.name.toLowerCase().includes(gFilter));
+  const key=['name','power','kp','t4','t5','dead','ch'][gSort];
+  rows.sort((a,b)=>{ let v=a[key]>b[key]?1:a[key]<b[key]?-1:0; return v*gDir; });
+  document.getElementById('govCount').textContent = rows.length.toLocaleString()+' governors';
+  document.getElementById('govBody').innerHTML = rows.map((r,i)=>`
+    <tr>
+      <td class="td-rank">${i+1}</td>
+      <td class="td-name">${r.name}</td>
+      <td class="td-num highlight">${fmt(r.power)}</td>
+      <td class="td-num">${fmt(r.kp)}</td>
+      <td class="td-num">${r.t4.toLocaleString()}</td>
+      <td class="td-num">${r.t5? r.t5.toLocaleString() : '<span style="color:var(--text-dim)">—</span>'}</td>
+      <td class="td-num">${r.dead.toLocaleString()}</td>
+      <td class="td-num">${r.ch? r.ch : '<span style="color:var(--text-dim)">—</span>'}</td>
+    </tr>`).join('');
+}
+renderGov();
+document.querySelectorAll('#govTable th.sortable').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const c=+th.dataset.col;
+    if(gSort===c) gDir*=-1; else { gSort=c; gDir = c===0?1:-1; }
+    document.querySelectorAll('#govTable th').forEach(h=>{ h.classList.remove('sorted'); const ic=h.querySelector('.sort-icon'); if(ic) ic.textContent='↕'; });
+    th.classList.add('sorted'); th.querySelector('.sort-icon').textContent = gDir===-1?'↓':'↑';
+    renderGov();
+  });
+});
+document.getElementById('govSearch').addEventListener('input',e=>{ gFilter=e.target.value.toLowerCase(); renderGov(); });
+</script>
+</body>
+</html>

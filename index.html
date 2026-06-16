@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingdom 4028 — Sons of Attila</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">KD 4028</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="governors.html">Governors</a></li>
+    <li><a href="kvk.html">KvK History</a></li>
+    <li><a href="org.html">Organization</a></li>
+    <li><a href="migration.html">Migration</a></li>
+  </ul>
+  <a href="https://discord.gg/Ym87J2mW3" target="_blank" class="nav-discord">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.102 18.078.114 18.1.131 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 13.99 13.99 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+    Join Discord ↗
+  </a>
+  <div class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Rise of Kingdoms</div>
+      <h1 class="hero-h1">Kingdom 4028</h1>
+      <p class="hero-sub">Sons of Attila &nbsp;·&nbsp; The Huns &nbsp;·&nbsp; Season in Progress</p>
+      <div class="hero-btns">
+        <a href="migration.html" class="btn btn-gold">Apply to Migrate</a>
+        <a href="governors.html" class="btn btn-ghost">View Governors</a>
+      </div>
+    </div>
+    <!-- ember dots ambient -->
+    <canvas id="emberCanvas" style="position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.5"></canvas>
+  </section>
+
+  <!-- KD STATS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="section-label">KD Stats</div>
+        <h2 class="section-title">Kingdom at a Glance</h2>
+        <p class="section-desc">Total lifetime stats for Kingdom 4028.</p>
+      </div>
+      <div class="stat-grid reveal">
+        <div class="stat-card">
+          <div class="stat-card-label">Civilization</div>
+          <div class="stat-card-value" style="font-size:1.8rem">Huns</div>
+          <div class="stat-card-sub">The nomadic conquerors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Imperium</div>
+          <div class="stat-card-value" style="font-size:1.8rem">4028</div>
+          <div class="stat-card-sub">The Hun Imperium</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Total Power</div>
+          <div class="stat-card-value">7.95B</div>
+          <div class="stat-card-sub">Kingdom total power</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Top 300 Kill Points</div>
+          <div class="stat-card-value">11.61B</div>
+          <div class="stat-card-sub">All-time KP earned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">City Hall 25</div>
+          <div class="stat-card-value">370</div>
+          <div class="stat-card-sub">Max city hall governors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">KvK Record</div>
+          <div class="stat-card-value" style="color:#7dc86a">1 &mdash; 0</div>
+          <div class="stat-card-sub">Undefeated</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KVK PREVIEW -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+        <div>
+          <div class="section-label">Kingdom vs. Kingdom</div>
+          <h2 class="section-title">KvK History</h2>
+          <p class="section-desc">Our performance across KvK seasons.</p>
+        </div>
+        <a href="kvk.html" class="btn btn-ghost" style="flex-shrink:0">View Detailed Breakdown →</a>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="kvk-table">
+          <thead>
+            <tr>
+              <th>Season</th>
+              <th>Opponents</th>
+              <th>Ruins</th>
+              <th>Zone Opening</th>
+              <th>Altars</th>
+              <th>Kingsland</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KvK 1</td>
+              <td style="color:var(--text-dim)">TBD</td>
+              <td><span class="td-badge badge-victory">Win</span></td>
+              <td><span class="td-badge badge-victory">Win</span></td>
+              <td><span class="td-badge badge-victory">Win</span></td>
+              <td><span class="td-badge badge-victory">Win</span></td>
+              <td><span class="td-badge badge-victory">✓ Victory</span></td>
+            </tr>
+            <tr>
+              <td>KvK 2</td>
+              <td style="color:var(--text-dim)">Upcoming</td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">Scheduled</span></td>
+            </tr>
+            <tr>
+              <td>KvK 3</td>
+              <td style="color:var(--text-dim)">Upcoming</td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">Scheduled</span></td>
+            </tr>
+            <tr>
+              <td>KvK 4</td>
+              <td style="color:var(--text-dim)">Upcoming</td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">—</span></td>
+              <td><span class="td-badge badge-pending">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="section-label">Trusted Partners</div>
+        <h2 class="section-title">Built With the Best</h2>
+        <p class="section-desc">KD 4028 is proud to partner with the top resources in Rise of Kingdoms.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.75rem" class="reveal">
+        <a href="https://infocat-rok.com" target="_blank" class="partner-card">
+          <div class="partner-logo">IC</div>
+          <div>
+            <div class="partner-name">InfoCat</div>
+            <div class="partner-desc">The #1 stats & analytics platform for Rise of Kingdoms. Track governors, kingdoms, and more.</div>
+          </div>
+          <div class="partner-link">Visit ↗</div>
+        </a>
+        <a href="https://discord.gg/Ym87J2mW3" target="_blank" class="partner-card">
+          <div class="partner-logo" style="background:rgba(88,101,242,0.15);border-color:rgba(88,101,242,0.3);color:#8fa3f5">DC</div>
+          <div>
+            <div class="partner-name">KD 4028 Discord</div>
+            <div class="partner-desc">Official kingdom server. War orders, migration applications, and community discussion.</div>
+          </div>
+          <div class="partner-link" style="color:#8fa3f5">Join ↗</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Ready to Join 4028?</h2>
+      <p>We're a top-performing Huns imperium looking for active, dedicated governors. Apply through our Discord to migrate and fight alongside us.</p>
+      <div class="cta-perks">
+        <span class="cta-perk">⚔️ Competitive KvK</span>
+        <span class="cta-perk">🤝 Organized Imperium</span>
+        <span class="cta-perk">📈 Active Growth</span>
+        <span class="cta-perk">🏆 Strong Leadership</span>
+      </div>
+      <a href="https://discord.gg/Ym87J2mW3" target="_blank" class="btn btn-gold">Apply on Discord</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Kingdom 4028 · Sons of Attila</div>
+    <ul class="footer-links">
+      <li><a href="governors.html">Governors</a></li>
+      <li><a href="kvk.html">KvK</a></li>
+      <li><a href="org.html">Org</a></li>
+      <li><a href="migration.html">Migration</a></li>
+      <li><a href="https://discord.gg/Ym87J2mW3" target="_blank">Discord ↗</a></li>
+    </ul>
+    <div class="footer-note">Data updated regularly via InfoCat</div>
+  </footer>
+</div>
+
+<script src="main.js"></script>
+<script>
+// Ember ambient canvas
+(function(){
+  const c = document.getElementById('emberCanvas');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  let W, H, particles = [];
+  function resize(){ W = c.width = c.offsetWidth; H = c.height = c.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  for(let i=0;i<40;i++){
+    particles.push({
+      x: Math.random()*100,
+      y: Math.random()*100,
+      r: 0.5 + Math.random()*1.5,
+      sp: 0.03 + Math.random()*0.08,
+      dr: (Math.random()-0.5)*0.04,
+      op: Math.random(),
+      color: Math.random()>0.5?'200,148,15':'179,53,32'
+    });
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(p=>{
+      p.y -= p.sp; p.x += p.dr;
+      p.op = Math.max(0, p.op - 0.002);
+      if(p.y < -2 || p.op <= 0){
+        p.y = 102; p.x = Math.random()*100; p.op = 0.3+Math.random()*0.5;
+      }
+      ctx.beginPath();
+      ctx.arc(p.x/100*W, p.y/100*H, p.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(${p.color},${p.op})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
